@@ -18,7 +18,7 @@ module.exports = {
 		},
     extend: {
       minHeight: {
-        universal: "webkit-fill-available"
+        universal: "-webkit-fill-available"
       }
     },
   },
