@@ -21,7 +21,6 @@ const Home: NextPage = () => {
       body: JSON.stringify({name:index, duration:timeline})
     });
     let xci = await res.json();
-    console.log(xci)
     setData(xci)
   }
 
