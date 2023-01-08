@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+@layer base {
 body {
   min-height: 100vh;
   /* mobile viewport bug fix */
@@ -11,6 +12,7 @@ body {
 
 html {
   height: -webkit-fill-available;
+}
 }
 
 @layer utilities {
