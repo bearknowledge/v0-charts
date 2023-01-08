@@ -17,9 +17,7 @@ module.exports = {
 			Inter: ['Inter', 'sans-serif'],
 		},
     extend: {
-      minHeight: {
-        universal: "-webkit-fill-available"
-      }
+    
     },
   },
   plugins: [],

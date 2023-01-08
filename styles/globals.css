@@ -3,18 +3,6 @@
 @tailwind utilities;
 
 
-@layer base {
-body {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
-}
-
-html {
-  height: -webkit-fill-available;
-}
-}
-
 @layer utilities {
   .glow {
     text-shadow: #2FFD76 1px 0 10px;

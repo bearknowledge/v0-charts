@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   }, [selected, timeline]);
 
   return (
-    <div className="min-h-universal w-screen h-[100%] flex flex-col bg-[#0E0F0D] overflow-hidden font-sans mobile:text-xs">
+    <div className="w-screen h-screen flex flex-col bg-[#0E0F0D] overflow-hidden font-sans mobile:text-xs">
       <Head>
         <title>Xchange Xata</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
         </p>
       </div>
 
-      <div className="grow h-[calc(100vh - 40vh)]; items-center mobile:pr-[30px] laptop:p-[10px]">
+      <div className="grow items-center mobile:pr-[30px] laptop:p-[10px]">
         <Chart key={data} data={data} />
       </div>
     </div>
