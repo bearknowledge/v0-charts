@@ -29,7 +29,7 @@ const Home: NextPage = () => {
   }, [selected, timeline]);
 
   return (
-    <div className="webkit w-screen h-screen flex flex-col bg-[#0E0F0D] overflow-hidden font-sans mobile:text-xs">
+    <div className="min-h-[-webkit-fill-available] w-screen h-[100%] flex flex-col bg-[#0E0F0D] overflow-hidden font-sans mobile:text-xs">
       <Head>
         <title>Xchange Xata</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
