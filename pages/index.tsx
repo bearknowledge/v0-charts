@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex flex-row justify-between items-center rounded-lg  m-4">
         <div className="flex flex-1 flex-row items-center">
-          <img src="/logo.svg" className="text-5xl"></img>
+          <img src="/Logo.svg" className="text-5xl"></img>
           <label className="ml-7 text-white font-light mobile:ml-3" htmlFor="index">
             Choose an Index:
           </label>
