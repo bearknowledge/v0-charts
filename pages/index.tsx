@@ -5,12 +5,12 @@ import React, { useEffect, useState } from "react";
 import Chart from "../components/chart";
 
 
-
-
 const Home: NextPage = () => {
   const [selected, isSelected] = useState("xci");
   const [timeline, setTimeline] = useState("daily")
   const [data, setData] = useState({} as any)
+
+  console.log(data.toString())
 
   const fetchData = async (index:string) => {
     let res = await fetch("/api/data", {
@@ -27,6 +27,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     fetchData(selected)
   }, [selected, timeline]);
+
 
   return (
     <div className="w-screen h-screen flex flex-col bg-[#0E0F0D] overflow-hidden font-sans mobile:text-xs">
@@ -101,15 +102,25 @@ const Home: NextPage = () => {
     {/* <button onClick={(e) => setTimeline((e.target as HTMLInputElement).value)} value="monthly" type="button" className={timeline === "monthly" ? "rounded-r inline-block px-6 py-2.5 bg-[#999999] text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out": "rounded-r inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out"}>Monthly</button> */}
   </div>
 </div>
-        <h1 className="text-white text-3xl font-sans font-medium pb-1 uppercase">
-          {selected}
-        </h1>
-        <h2 className="text-[#2FFD76] text-5xl font-sans font-bold pb-1">
-        {"$" + data?.[data.length - 1]?.price.toFixed(2)}
-        </h2>
-        <p className="text-[gray] text-md font-sans font-light">
-          Last updated on: {data?.[data.length - 1]?.date} at {data?.[data.length - 1]?.time} UTC
-        </p>
+{data.toString() === '[object Object]' ?
+      <>
+      <div className="animate-pulse h-2 bg-slate-200 rounded"></div>
+      <div className="animate-pulse  h-2 bg-slate-200 rounded"></div>
+      <div className="animate-pulse h-2 bg-slate-200 rounded"></div>
+      </>
+         : 
+         <>
+            <h1 className="text-white text-3xl font-sans font-medium pb-1 uppercase">
+            {selected}
+          </h1>
+          <h2 className="text-[#2FFD76] text-5xl font-sans font-bold pb-1">
+          {"$" + data?.[data.length - 1]?.price.toFixed(2)}
+          </h2>
+          <p className="text-[gray] text-md font-sans font-light">
+            Last updated on: {data?.[data.length - 1]?.date} at {data?.[data.length - 1]?.time} UTC
+          </p>
+          </>
+}
       </div>
 
       <div className="grow items-center mobile:pr-[30px] laptop:p-[10px]">

@@ -43,7 +43,7 @@ export default function Chart(data: any) {
     
 
         <Tooltip contentStyle={{backgroundColor:'gray',outline:'none', border:'none', borderRadius:'10px' }} 
-        labelStyle={{color:'black'}}/>
+        wrapperStyle={{ outline: "none" }} labelStyle={{color:'black'}}/>
 
         <Line
           type="monotone"
