@@ -14,7 +14,8 @@
   }
 
   .webkit {
-    padding: env(safe-area-inset-bottom);
+    min-height: 100vh; 
+    min-height: -webkit-fill-available;
   }
 
   .border-gradient {
