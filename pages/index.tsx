@@ -41,22 +41,28 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-row justify-between items-center rounded-lg  m-4">
-        <div className="flex flex-1 flex-row items-center">
+        <div className="flex flex-1 flex-row items-center laptop:text-lg">
           <img src="/Logo.svg" className="text-5xl"></img>
-          <label className="ml-7 text-white font-light mobile:ml-3" htmlFor="index">
+         
+          <label className="ml-7 text-white font-light mobile:ml-3 mr-1" htmlFor="index">
             Choose an Index:
           </label>
+          <div className="flex flex-row border-white border rounded-lg justify-center items-center ml-3 ">
           <select
             id="index"
             onChange={(e) => isSelected(e.target.value)}
-            className="w-[75px] text-ellipsis focus:outline-none font-medium bg-transparent text-white rounded-lg"
+            className="text-white p-2  appearance-none w-[75px] text-ellipsis focus:outline-none font-medium bg-transparent text-white laptop:w-fit"
           >
             <option value="xci">Xsauce Culture Index</option>
 
             <option value="sp50">S&P50(Sneaker Benchmark)</option>
 
             <option value="hype6">HYPE6</option>
+            
           </select>
+          <img className="max-w-[32px] max-h-[32px]" src='/down-arrow.png'/>
+          </div>
+          
         </div>
 
         <div className=" hidden laptop:flex flex-row font-SG">
