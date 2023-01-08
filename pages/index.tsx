@@ -106,7 +106,7 @@ const Home: NextPage = () => {
         </p>
       </div>
 
-      <div className="grow items-center mobile:pr-[30px] laptop:p-[10px]">
+      <div className="grow h-[calc(100vh - 40vh)]; items-center mobile:pr-[30px] laptop:p-[10px]">
         <Chart key={data} data={data} />
       </div>
     </div>
