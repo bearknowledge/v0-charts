@@ -43,7 +43,7 @@ export default function Chart(data: any) {
     
 
         <Tooltip contentStyle={{backgroundColor:'gray',outline:'none', border:'none', borderRadius:'10px' }} 
-        wrapperStyle={{ outline: "none" }} labelStyle={{color:'black'}}/>
+        wrapperStyle={{ outline: "none" }} labelStyle={{color:'black'}} formatter={(value, name, props) => [value = "$" + Number(value).toFixed(2), name = "Price"]}/>
 
         <Line
           type="monotone"
