@@ -16,7 +16,11 @@ module.exports = {
 			SG: ['"Space Grotesk"', 'sans-serif'],
 			Inter: ['Inter', 'sans-serif'],
 		},
-    extend: {},
+    extend: {
+      minHeight: {
+        universal: "webkit-fill-available"
+      }
+    },
   },
   plugins: [],
 }
