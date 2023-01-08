@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   const [data, setData] = useState({} as any)
 
   const fetchData = async (index:string) => {
-    let res = await fetch("charts.xsauce.io/api/data", {
+    let res = await fetch("/api/data", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
