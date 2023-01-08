@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
 @layer utilities {
   .glow {
     text-shadow: #2FFD76 1px 0 10px;
@@ -12,12 +23,6 @@
       display: none;
     }
   }
-
-  .webkit {
-    min-height: 100vh; 
-    min-height: -webkit-fill-available;
-  }
-
   .border-gradient {
     border:2px solid transparent;
     border-radius: 10px;
