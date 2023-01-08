@@ -42,7 +42,7 @@ export default function Chart(data: any) {
         <XAxis dataKey="date" />
     
 
-        <Tooltip contentStyle={{backgroundColor:'gray',outline:'none', border:'none',  }} 
+        <Tooltip contentStyle={{backgroundColor:'gray',outline:'none', border:'none', borderRadius:'10px' }} 
         labelStyle={{color:'black'}}/>
 
         <Line
