@@ -39,6 +39,7 @@ const Home: NextPage = () => {
 					rel="stylesheet"
 				/>
         <link rel="icon" href="/Logo.svg" />
+        <meta property="og:image" content="/Logo.svg"/>
       </Head>
       <div className="flex flex-row justify-between items-center rounded-lg  m-4">
         <div className="flex flex-1 flex-row items-center laptop:text-lg">
