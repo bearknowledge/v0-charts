@@ -76,7 +76,7 @@ const Home: NextPage = () => {
           </a>
         
           <a
-            href="https://docs.xsauce.io/getting-started/introduction"
+            href="https://linktr.ee/xsauceio"
             target="_blank"
             className="ml-7 pr-7 text-lg text-white border-r border-gray-200"
           >
