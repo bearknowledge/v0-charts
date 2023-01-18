@@ -10,7 +10,6 @@ const Home: NextPage = () => {
   const [timeline, setTimeline] = useState("daily")
   const [data, setData] = useState({} as any)
 
-  console.log(data.toString())
 
   const fetchData = async (index:string) => {
     let res = await fetch("/api/data", {
@@ -52,7 +51,7 @@ const Home: NextPage = () => {
           <select
             id="index"
             onChange={(e) => isSelected(e.target.value)}
-            className="text-white p-2  appearance-none w-[75px] text-ellipsis focus:outline-none font-medium bg-transparent text-white laptop:w-fit"
+            className="text-white py-2 pl-2 pr-10 bg-[url('/down-arrow.png')] bg-[length:32px_32px] bg-right bg-no-repeat appearance-none w-[75px] text-ellipsis focus:outline-none font-medium bg-transparent text-white laptop:w-fit"
           >
             <option value="xci">Xsauce Culture Index</option>
 
@@ -61,7 +60,7 @@ const Home: NextPage = () => {
             <option value="hype6">HYPE6</option>
             
           </select>
-          <img className="max-w-[32px] max-h-[32px]" src='/down-arrow.png'/>
+
           </div>
           
         </div>
@@ -97,8 +96,9 @@ const Home: NextPage = () => {
       <div className="flex w-full  flex-col justify-center items-center font-Inter mobile:mb-6">
       <div className="flex items-center justify-center pb-3">
   <div className="inline-flex" role="group">
-    <button onClick={(e) => setTimeline((e.target as HTMLInputElement).value)} value="daily" type="button" className={timeline === "daily" ? "rounded-l inline-block px-6 py-2.5 bg-[#999999] text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out": "rounded-l inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out"}>Daily</button>
-    <button onClick={(e) => setTimeline((e.target as HTMLInputElement).value)} value="weekly"type="button" className={timeline === "weekly" ? " rounded-r inline-block px-6 py-2.5 bg-[#999999] text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out": "rounded-r inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out"}>Weekly</button>
+  <span className="rounded inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase">Daily</span>
+    {/* <button onClick={(e) => setTimeline((e.target as HTMLInputElement).value)} value="daily" type="button" className={timeline === "daily" ? "rounded-l inline-block px-6 py-2.5 bg-[#999999] text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out": "rounded-l inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out"}>Daily</button> */}
+    {/* <button onClick={(e) => setTimeline((e.target as HTMLInputElement).value)} value="weekly"type="button" className={timeline === "weekly" ? " rounded-r inline-block px-6 py-2.5 bg-[#999999] text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out": "rounded-r inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out"}>Weekly</button> */}
     {/* <button onClick={(e) => setTimeline((e.target as HTMLInputElement).value)} value="monthly" type="button" className={timeline === "monthly" ? "rounded-r inline-block px-6 py-2.5 bg-[#999999] text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out": "rounded-r inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase hover:bg-[#999999] focus:bg-[#999999] focus:outline-none focus:ring-0 active:bg-[#999999] transition duration-150 ease-in-out"}>Monthly</button> */}
   </div>
 </div>
